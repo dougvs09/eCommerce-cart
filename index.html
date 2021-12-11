@@ -6,10 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>E-Commerce</title>
 		<link rel="shortcut icon" href="#" type="image/x-icon" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header>
+			<button class="menu_button" data-menu="button">
+				<span class="menu_button--hamburger"></span>
+			</button>
 			<div class="logo">
 				<h1>Doug Shoes</h1>
 			</div>
@@ -20,7 +23,9 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 				<div class="cart_icon" data-product="cart">
-					<a href="#"><img src="img/shopping cart.svg" alt="carrinho de compras"/></a>
+					<a href="#"
+						><img src="img/shopping cart.svg" alt="carrinho de compras"
+					/></a>
 				</div>
 				<span data-product="number"></span>
 			</nav>
@@ -28,8 +33,7 @@
 				<div class="products_cart">
 					<span class="close_cart">X</span>
 					<h2>Your Cart</h2>
-					<ul class="products_list--cart">
-					</ul>
+					<ul class="products_list--cart"></ul>
 				</div>
 				<div class="products_information">
 					<span data-product="totalPrice">Total price: </span>

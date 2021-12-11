@@ -128,7 +128,7 @@ export default function initProducts() {
 		}
 	
 		const populateCart = (cart) => {
-			cart.forEach(item => addCartProduct(item));
+			cart.forEach(item => createProductFromCart(item));
 		}
 	
 		const cartEvents = () => {
