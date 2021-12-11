@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>E-Commerce</title>
+		<link rel="shortcut icon" href="#" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1>Doug Shoes</h1>
+			</div>
+			<nav class="menu">
+				<ul class="menu_items">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<div class="cart_icon" data-product="cart">
+					<a href="#"><img src="img/shopping cart.svg" alt="carrinho de compras"/></a>
+				</div>
+				<span data-product="number"></span>
+			</nav>
+			<div class="cart">
+				<div class="products_cart">
+					<span class="close_cart">X</span>
+					<h2>Your Cart</h2>
+					<ul class="products_list--cart">
+					</ul>
+				</div>
+				<div class="products_information">
+					<span data-product="totalPrice">Total price: </span>
+					<button data-product="clean">Clean Cart</button>
+				</div>
+			</div>
+		</header>
+		<section class="products">
+			<ul class="products_list"></ul>
+		</section>
+		<script type="module" src="js/script.js"></script>
+	</body>
+</html>

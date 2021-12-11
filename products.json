@@ -1,0 +1,42 @@
+[
+  {
+    "id" : "1",
+    "product": "Tênis Nike SB",
+    "price": 199.99,
+    "type": "Skateoarding",
+    "img": "nikesb.jpg",
+    "quantity": 0
+  },
+  {
+		"id": "2",
+		"product": "Tênis Adidas Superstar",
+		"price": 259.99,
+		"type": "Casual",
+		"img": "adidassuperstar.jpg",
+		"quantity": 0
+	},
+  {
+		"id": "3",
+		"product": "Tênis Nike Jordan",
+		"price": 699.99,
+		"type": "Basquete",
+		"img": "nikejordan.jpg",
+		"quantity": 0
+	},
+  {
+		"id": "4",
+		"product": "Tênis Vans SK8",
+		"price": 399.99,
+		"type": "Casual",
+		"img": "vanssk8.jpg",
+		"quantity": 0
+	},
+  {
+		"id": "5",
+		"product": "Chinelo Nike Offcourt",
+		"price": 159.99,
+		"type": "Casual",
+		"img": "chinelonikeoffcourt.jpg",
+		"quantity": 0
+	}
+]
