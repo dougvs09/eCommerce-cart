@@ -31,7 +31,7 @@ export default function initProducts() {
 				resultUi += `<li>
 				<img data-product="image" src="img/${item.img}" alt="${item.product}">
 				<h2 data-product="name">${item.product}</h2>
-				<span data-product="price">R$ ${item.price}</span>
+				<span data-product="price">US$ ${item.price}</span>
 				<h3 data-product="type">${item.type}</h3>
 				<button data-product="button" data-id="${item.id}">Add to cart</button>
 				</li>`;
@@ -88,7 +88,7 @@ export default function initProducts() {
 			productsInCart.innerHTML = `
 			<img data-product="image" src="img/${product.img}" alt="${product.product}">
 			<h2 data-product="name">${product.product}</h2>
-			<span data-product="price">R$ ${product.price}</span>
+			<span data-product="price">US$ ${product.price}</span>
 			<span data-product="quantity"><pre data-product="less" data-id="${product.id}">-</pre>${product.quantity}<pre data-product="most" data-id="${product.id}">+</pre></span>
 			<h3 data-product="type">${product.type}</h3>
 			<span data-product="remove" data-id="${product.id}">Remove</span>`;
@@ -98,7 +98,7 @@ export default function initProducts() {
 	
 		const setPrice = () => {
 			const totalPrice = cart.reduce((accum, item) => accum + (item.price * item.quantity), 0)
-			$totalPrice.innerText = `R$ ${totalPrice.toFixed(2)}`;
+			$totalPrice.innerText = `Your Total: US$ ${totalPrice.toFixed(2)}`;
 		}
 	
 		const setQuantity = () => {

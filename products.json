@@ -4,39 +4,63 @@
     "product": "Tênis Nike SB",
     "price": 199.99,
     "type": "Skateoarding",
-    "img": "nikesb.jpg",
+    "img": "nikesb.webp",
     "quantity": 0
   },
   {
 		"id": "2",
 		"product": "Tênis Adidas Superstar",
-		"price": 259.99,
+		"price": 139.99,
 		"type": "Casual",
-		"img": "adidassuperstar.jpg",
+		"img": "adidassuperstarottech.webp",
 		"quantity": 0
 	},
   {
 		"id": "3",
-		"product": "Tênis Nike Jordan",
-		"price": 699.99,
-		"type": "Basquete",
-		"img": "nikejordan.jpg",
+		"product": "Tênis Nike Air Force 1'07",
+		"price": 99.99,
+		"type": "Casual",
+		"img": "nikeairforce107.webp",
 		"quantity": 0
 	},
   {
 		"id": "4",
 		"product": "Tênis Vans SK8",
-		"price": 399.99,
-		"type": "Casual",
-		"img": "vanssk8.jpg",
+		"price": 199.99,
+		"type": "Skateboarding",
+		"img": "vanssk8.webp",
 		"quantity": 0
 	},
   {
 		"id": "5",
 		"product": "Chinelo Nike Offcourt",
-		"price": 159.99,
+		"price": 39.99,
 		"type": "Casual",
-		"img": "chinelonikeoffcourt.jpg",
+		"img": "nikeoffcourt.webp",
+		"quantity": 0
+	},
+	{
+		"id": "6",
+		"product": "Tênis New Balance 247S",
+		"price": 99.99,
+		"type": "Running",
+		"img": "newbalancetempo.webp",
+		"quantity": 0
+	},
+	{
+		"id": "7",
+		"product": "Tênis Yeezy Boost 350 V2",
+		"price": 599.99,
+		"type": "Casual",
+		"img": "yeezyboost350.webp",
+		"quantity": 0
+	},
+	{
+		"id": "8",
+		"product": "Tênis Nike Court Legacy",
+		"price": 199.99,
+		"type": "Casual",
+		"img": "nikecourtlegacy.webp",
 		"quantity": 0
 	}
 ]
