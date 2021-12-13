@@ -5,7 +5,6 @@ export default function initProducts() {
 	const $closeButton = document.querySelector('.close_cart');
 	const $cartIcon = document.querySelector('[data-product="cart"]');
 	const $totalPrice = document.querySelector('[data-product="totalPrice"]');
-	const $productQuantity = document.querySelector('[data-product="quantity"]');
 	const $quantityInCart = document.querySelector('[data-product="number"]');
 	const $buttonClean = document.querySelector('[data-product="clean"]');
 	const url = './products.json';
@@ -60,6 +59,20 @@ export default function initProducts() {
 			})
 		}
 	
+		const createProductFromCart = (product) => {
+			const productsInCart = document.createElement('li');
+			
+			productsInCart.innerHTML = `
+			<img data-product="image" src="img/${product.img}" alt="${product.product}">
+			<h2 data-product="name">${product.product}</h2>
+			<span data-product="price">US$ ${product.price}</span>
+			<span data-product="quantity"><pre data-product="less" data-id="${product.id}">-</pre>${product.quantity}<pre data-product="most" data-id="${product.id}">+</pre></span>
+			<h3 data-product="type">${product.type}</h3>
+			<span data-product="remove" data-id="${product.id}">Remove</span>`;
+			
+			$listItensOnCart.appendChild(productsInCart);
+		}
+
 		const addProductOnCart = (event, id) => {
 			const thisProduct = event.target;
 	
@@ -82,20 +95,6 @@ export default function initProducts() {
 			hideProducts();
 		}
 		
-		const createProductFromCart = (product) => {
-			const productsInCart = document.createElement('li');
-			
-			productsInCart.innerHTML = `
-			<img data-product="image" src="img/${product.img}" alt="${product.product}">
-			<h2 data-product="name">${product.product}</h2>
-			<span data-product="price">US$ ${product.price}</span>
-			<span data-product="quantity"><pre data-product="less" data-id="${product.id}">-</pre>${product.quantity}<pre data-product="most" data-id="${product.id}">+</pre></span>
-			<h3 data-product="type">${product.type}</h3>
-			<span data-product="remove" data-id="${product.id}">Remove</span>`;
-			
-			$listItensOnCart.appendChild(productsInCart);
-		}
-	
 		const setPrice = () => {
 			const totalPrice = cart.reduce((accum, item) => accum + (item.price * item.quantity), 0)
 			$totalPrice.innerText = `Your Total: US$ ${totalPrice.toFixed(2)}`;
@@ -199,12 +198,10 @@ export default function initProducts() {
 	const DataStorage = () => {
 		const saveProducts = (products) => {
 			localStorage.setItem('products', JSON.stringify(products));
-			return this;
 		}
 	
 		const saveCart = (cart) => {
 			localStorage.setItem('cart', JSON.stringify(cart));
-			return this;
 		}
 	
 		const getProduct = (id) => {
