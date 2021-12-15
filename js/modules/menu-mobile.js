@@ -4,26 +4,25 @@ export default function initMenuMobile() {
   const $html = document.documentElement;
   const userEvents = ['click', 'touch'];
 
-  const openMenu = () => {
-    $menuItems.classList.add('active_menu');
-
-    userEvents.forEach(userEvents => {
-      setTimeout(() => {
-        $html.addEventListener(userEvents, clickOutside);
-      })
-    })
-  }
-
   const clickOutside = (event) => {
-    if(!$menuItems.classList.contains(event.target)){
-      userEvents.forEach(userEvents => {
-        $html.removeEventListener(userEvents, clickOutside);
-			});
+    if (!$menuItems.classList.contains(event.target)) {
+      userEvents.forEach((events) => {
+        $html.removeEventListener(events, clickOutside);
+      });
       $menuItems.classList.remove('active_menu');
     }
-  }
+  };
 
-  userEvents.forEach(userEvents => {
-    $menuButton.addEventListener(userEvents, openMenu);
-  })
+  const openMenu = () => {
+    $menuItems.classList.add('active_menu');
+    userEvents.forEach((events) => {
+      setTimeout(() => {
+        $html.addEventListener(events, clickOutside);
+      });
+    });
+  };
+
+  userEvents.forEach((events) => {
+    $menuButton.addEventListener(events, openMenu);
+  });
 }
